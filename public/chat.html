@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>chat</title>
+</head>
+<body class="container">
+    
+    <div class="row mt-5">
+        <div class="col-sm-6">
+
+            <h3>Enviar Mensaje</h3>
+            <hr>
+            <input type="text"
+                    id="txtUid"
+                    class="from-control"
+                    placeholder="uid"
+                    autocomplete="off">
+            <br>
+            <input type="text"
+                    id="txtmsg"
+                    class="from-control"
+                    placeholder="Mensaje"
+                    autocomplete="off">
+<h3>usuarios conectados</h3> 
+<hr>
+<ul id="ulUsuarios"><!-- para listar los usuarios -->
+
+</ul>           
+                </div>
+        <div class="col-sm-6">
+
+            <h3>chat completo</h3>
+            <hr>
+            <ul id="ulMensaje"></ul>
+        </div>
+
+
+    </div>
+    <button id="btnSalir" class="btn btn-outline-danger">LogOut</button>
+    <!--Configuracion de sockets desde el frond-->
+    <script src="../socket.io/socket.io.js"></script>
+    <script src="./js/chat.js"></script>
+</body>
+</html>
